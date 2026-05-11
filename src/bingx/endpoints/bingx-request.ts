@@ -34,6 +34,7 @@ export class BingxRequest<R> implements BingxRequestInterface<R> {
           signature: this.endpoint.signature().toString(),
         },
         headers: this.endpoint.apiKey().asHeader(),
+        responseType: this.endpoint.responseType?.(),
         url: this.endpoint.path(),
       }),
     );
